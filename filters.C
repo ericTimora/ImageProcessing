@@ -37,16 +37,15 @@ Blender::~Blender(){
 void Shrinker::Execute(){
 	unsigned char 	*inputBuff;
 	unsigned char	*outputBuff;
-	int 			index(0);
-	int				index1(0);
-	const int 		inWidth(input->getWidth());
-	const int 		inHeight(input->getHeight());
-	const int 		outWidth(inWidth/2);
-	const int 		outHeight(inHeight/2);
+	int 	        index(0);
+	int		index1(0);
+	const int 	inWidth(input->getWidth());
+	const int 	inHeight(input->getHeight());
+	const int 	outWidth(inWidth/2);
+	const int 	outHeight(inHeight/2);
 	
-	outputBuff 	= new unsigned char[COLOR_DIMENSION * outWidth * outHeight];
-
-	inputBuff   = input->getData();
+	outputBuff	= new unsigned char[COLOR_DIMENSION * outWidth * outHeight];
+	inputBuff	= input->getData();
 
 	for(int r = 0; r < outHeight; r++){
 		for(int c = 0; c < outWidth; c++){
@@ -67,16 +66,15 @@ void LRConcat::Execute(){
 	unsigned char 	*leftBuff;
 	unsigned char 	*rightBuff;
 	unsigned char 	*outputBuff;
-	const int 		leftWidth(input->getWidth());
-	const int		leftHeight(input->getHeight());
-	const int		rightWidth(input2->getWidth());
-	const int		rightHeight(input2->getHeight());
-	const int		outWidth(leftWidth + rightWidth);
-	int				index(0);
-	int				index1(0);
+	const int 	leftWidth(input->getWidth());
+	const int	leftHeight(input->getHeight());
+	const int	rightWidth(input2->getWidth());
+	const int	rightHeight(input2->getHeight());
+	const int	outWidth(leftWidth + rightWidth);
+	int		index(0);
+	int		index1(0);
 	
 	outputBuff 	= new unsigned char[COLOR_DIMENSION * outWidth * leftHeight];
-	
 	leftBuff 	= input->getData();
 	rightBuff 	= input2->getData();
 
@@ -110,14 +108,14 @@ void TBConcat::Execute(){
 	unsigned char 	*topBuff;
 	unsigned char 	*bottomBuff;
 	unsigned char 	*outputBuff;
-	const int		topWidth(input->getWidth());
-	const int		topHeight(input->getHeight());
-	const int		botWidth(input2->getWidth());
-	const int		botHeight(input2->getHeight());
-	const int		outWidth(topWidth);
-	const int		outHeight(topHeight + botHeight);
-	int				index(0);
-	int				index1(0);
+	const int	topWidth(input->getWidth());
+	const int	topHeight(input->getHeight());
+	const int	botWidth(input2->getWidth());
+	const int	botHeight(input2->getHeight());
+	const int	outWidth(topWidth);
+	const int	outHeight(topHeight + botHeight);
+	int		index(0);
+	int		index1(0);
 
 	outputBuff 	= new unsigned char[COLOR_DIMENSION * outWidth * outHeight];
 	topBuff		= input->getData();
@@ -158,12 +156,12 @@ void Blender::Execute(){
 	unsigned char 	*buff1;
 	unsigned char 	*buff2;
 	unsigned char 	*buffOut;
-	const int 		width(input->getWidth());
-	const int		height(input->getHeight());
-	int				index(0);
-	int redFactor(0);
-	int greenFactor(0);
-	int blueFactor(0);
+	const int 	width(input->getWidth());
+	const int	height(input->getHeight());
+	int		index(0);
+	int 		redFactor(0);
+	int		greenFactor(0);
+	int		blueFactor(0);
 
 	buffOut = new unsigned char[COLOR_DIMENSION * width * height];
 
